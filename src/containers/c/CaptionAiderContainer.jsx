@@ -14,6 +14,7 @@ const CaptionAiderContainer = props => {
 		toggleModal,
 	} = props
 
+
 	const target = useRef(null)
 	const { id } = useParams()
 
