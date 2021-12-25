@@ -15,7 +15,6 @@ const updateSessionId = (id) => {
 	}
 }
 
-
 const apiProxy = {
 	admin: {
 		search: {
