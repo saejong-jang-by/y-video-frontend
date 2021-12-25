@@ -135,7 +135,7 @@ const mapThunksToProps = {
 	setEvents: interfaceService.setEvents,
 	getResource: resourceService.getResources,
 	getContent: contentService.getContent,
-	getStreamKey: resourceService.getStreamKey, // file media
+	getStreamKey: resourceService.getStreamKey,
 	updateContent: contentService.updateContent,
 	activeUpdate: subtitlesService.activeUpdate,
 	toggleModal: interfaceService.toggleModal,
