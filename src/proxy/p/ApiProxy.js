@@ -46,12 +46,6 @@ const apiProxy = {
 				content: {
 					get: async (term) => {
 						const result = await axios(`${process.env.REACT_APP_YVIDEO_SERVER}/api/admin/content/${term}`, {withCredentials: true})
-
-						// result.data.forEach(element => {
-						// 	element[`name`] = element[`collection-name`]
-						// 	delete element[`collection-name`]
-						// })
-
 						return result
 					},
 				},
