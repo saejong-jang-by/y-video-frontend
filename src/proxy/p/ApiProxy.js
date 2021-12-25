@@ -7,8 +7,6 @@ const updateSessionId = (id) => {
 	// console.log(`NEW => `, id)
 	if(id !== ``){
 		if(id === `expired`){
-			// console.log('got here')
-
 			alert(`Your session has expired. Please, log back in`)
 			apiProxy.auth.logout()
 			// CAS LOGOUT https://cas.byu.edu/cas/logout
