@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - uses: convictional/trigger-workflow-and-wait@v1.3.0
+    - uses: youthrich40/trigger-workflow-and-wait@v1.3.0
       with:
         owner: youthrich40
         repo: y-video-back-end
