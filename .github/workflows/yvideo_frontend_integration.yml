@@ -30,7 +30,6 @@ jobs:
       with:
         owner: youthrich40
         repo: y-video-back-end
-        github_user: youthrich40
         github_token: ${{ secrets.YVIDEO_ACCESS_TOKEN }}
         workflow_file_name: clojure.yml
         ref: development
