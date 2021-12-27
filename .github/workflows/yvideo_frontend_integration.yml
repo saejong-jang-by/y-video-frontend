@@ -20,11 +20,12 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: convictional/trigger-workflow-and-wait@v1.3.0
       with: y-video-back-end
       github_token: ${{ secrets.YVIDEO_ACCESS_TOKEN }}
       workflow_file_name: clojure.yml
       ref: development
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
