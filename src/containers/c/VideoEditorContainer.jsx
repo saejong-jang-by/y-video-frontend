@@ -42,6 +42,8 @@ const VideoEditorContainer = props => {
 	const [sKey, setKey] = useState(``)
 	const [isStreamKeyLoaded, setIsStreamKeyLoaded] = useState(false)
 
+
+
 	useEffect(() => {
 
 		if (!contentCache.hasOwnProperty(id))
