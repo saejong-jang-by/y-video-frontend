@@ -17,13 +17,11 @@ jobs:
 
     steps:
       - name: PING - Dispatch initiating repository event
-        if: github.event.action != 'pong'
-
         run: |
           curl -X POST https://api.github.com/repos/youthrich40/y-video-back-end/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.YVIDEO_ACCESS_TOKEN }} \
-          --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
+          --data '{"event_type": "yvideo-frontend", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
 
     strategy:
       matrix:
