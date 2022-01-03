@@ -22,7 +22,6 @@ jobs:
           curl \
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
-            -u ${{ secrets.YVIDEO_ACCESS_TOKEN }} \
             https://api.github.com/repos/youthrich40/y-video-back-end/dispatches \
             -d '{"event_type":"ping"}'
 
