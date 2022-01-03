@@ -26,9 +26,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-        run: npm install
-        run: npm test
-        run: npm build
+      - run: npm install
+      - run: npm test
+      - run: npm build
       - name: Dispatch initiating repository event
         run: |
           curl -X POST https://api.github.com/repos/youthrich40/y-video-back-end/dispatches \
