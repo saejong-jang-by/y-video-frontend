@@ -15,6 +15,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
       - name: Dispatch initiating repository event
         run: |
@@ -22,11 +26,6 @@ jobs:
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.YVIDEO_ACCESS_TOKEN }} \
           --data '{"event_type": "yvideo-frontend", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
