@@ -21,7 +21,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - name: ping dispatch
       run: |
         curl -X POST https://api.github.com/repos/youthrich40/y-video-back-end/dispatches \
         -H 'Accept: application/vnd.github.everest-preview+json' \
