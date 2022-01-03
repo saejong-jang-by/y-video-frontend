@@ -21,18 +21,18 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      - name: ping dispatch
+      run: |
+        curl -X POST https://api.github.com/repos/youthrich40/y-video-back-end/dispatches \
+        -H 'Accept: application/vnd.github.everest-preview+json' \
+        -u ${{ secrets.ACCESS_TOKEN }} \
+        --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
     # - uses: actions/checkout@v2
     # - name: Use Node.js ${{ matrix.node-version }}
     #   uses: actions/setup-node@v2
     #   with:
     #     node-version: ${{ matrix.node-version }}
     #     cache: 'npm'
-
-      run: |
-            curl -X POST https://api.github.com/repos/youthrich40/y-video-back-end/dispatches \
-            -H 'Accept: application/vnd.github.everest-preview+json' \
-            -u ${{ secrets.ACCESS_TOKEN }} \
-            --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
 
     # - uses: convictional/trigger-workflow-and-wait@v1.3.0
     #   with:
